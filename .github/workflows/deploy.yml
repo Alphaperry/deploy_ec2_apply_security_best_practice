@@ -27,6 +27,9 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION}}
 
+    - name: Set Terraform variables
+      run:
+        echo "alert_email = \"${{ secrets.ADMIN_EMAIL }}\"" >> terraform.tfvars 
     - name: Terraform Init
       run: terraform init
 
