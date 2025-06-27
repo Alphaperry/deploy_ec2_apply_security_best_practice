@@ -10,6 +10,9 @@ jobs:
     name: Deploy via Terraform and SSH
     runs-on: ubuntu-latest
 
+    env:
+      TF_VAR_alert_email: ${{ secrets.ADMIN_EMAIL }}
+
     steps:
     - name: Checkout Code
       uses: actions/checkout@v3
@@ -27,9 +30,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION}}
 
-    - name: Set Terraform variables
-      run:
-        echo "alert_email = \"${{ secrets.ADMIN_EMAIL }}\"" >> terraform.tfvars 
     - name: Terraform Init
       run: terraform init
 

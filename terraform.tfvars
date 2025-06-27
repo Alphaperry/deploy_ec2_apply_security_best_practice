@@ -44,4 +44,3 @@ egress = [
   }
 }
 
-alert_email = "" #replace with your email address
