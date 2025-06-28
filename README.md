@@ -50,7 +50,7 @@ An EC2 key pair (public/private)
 # Setup Instructions
 1. Clone the Repo  
 bash
-git clone https://github.com/Alphaperry/static-site-deploy.git
+git clone https://github.com/Alphaperry/deploy_ec2_apply_security_best_practice
 cd static-site-deploy
 2. Deploy the Infrastructure
 bash

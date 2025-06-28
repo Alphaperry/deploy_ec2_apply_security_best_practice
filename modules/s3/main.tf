@@ -24,7 +24,7 @@ resource "aws_s3_bucket_public_access_block" "secure_block" {
 # 1. Create S3 Bucket for CloudTrail Logs
 resource "aws_s3_bucket" "cloudtrail_logs" {
   bucket = "cloudtrail-logs-secure-${random_id.bucket_id.hex}"
-  
+  force_destroy = true
   tags = {
     Name = "CloudTrail Logs Bucket"
   }
