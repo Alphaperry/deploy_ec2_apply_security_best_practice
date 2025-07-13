@@ -2,8 +2,9 @@
 #               HEAD
 
 security best pratice via Terraform & GitHub Actions
-This project demonstrates how to provision an AWS EC2 instance using Terraform, configure it with Nginx, and give give this inatance read only access to an s3 bucket
-
+This project demonstrates how to provision an AWS EC2 instance using
+Terraform, configure it with Nginx, and give give this inatance read only
+access to an s3 bucket
 in this project we also configure CloudTrail and CloudWatch with both delivering logs to an s3 bucket 
 these logs are monitored by GuardDuty with alert set to notify me through an email in case of any suspicious activity
 
@@ -64,6 +65,7 @@ terraform apply
    AWS_SECRET_ACCESS_KEY
    AWS_REGION
    ADMIN_EMAIL #your alert/notification email
+
 4. Push a Site Update
 bash
 
@@ -88,9 +90,7 @@ Certified AWS Cloud & DevOps Engineer
 This project is licensed under the MIT License
 Built with  by a Cloud Engineer who automates everything.
 
-# static-site-deploy
-Static website deployed via Terraform and GitHub
-Actions
+
 
 
 
