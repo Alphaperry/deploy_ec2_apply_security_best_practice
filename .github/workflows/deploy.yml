@@ -39,6 +39,9 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
       run: terraform apply -auto-approve
+      
+    - name: wait before destroying all resources
+      run: sleep 300
 
     - name: Terraform destroy
       if: github.ref == 'refs/heads/main'
